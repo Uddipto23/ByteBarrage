@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Profile</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #161A28;
+        }
+        .profile-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], input[type="file"], button {
+            display: block;
+            margin: 10px 0;
+            width: 100%;
+            padding: 10px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form class="profile-form" action="save_profile.php" method="POST" enctype="multipart/form-data">
+        <h2>Complete Your Profile</h2>
+        <label for="fullname">Full Name:</label>
+        <input type="text" name="fullname" id="fullname" required>
+
+        <label for="profilePicture">Profile Picture:</label>
+        <input type="file" name="profilePicture" id="profilePicture" required>
+
+        <button type="submit">Save Profile</button>
+    </form>
+</body>
+</html>

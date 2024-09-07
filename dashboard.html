@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #161a28;
+            color: #fff;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #2a2e45;
+            height: 100vh;
+            position: fixed;
+            padding: 20px;
+        }
+        .sidebar h1 {
+            color: #fff;
+            font-size: 22px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            background-color: #4b4fa2;
+            color: white;
+            text-decoration: none;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .sidebar a:hover {
+            background-color: #676fd9;
+        }
+        .main-content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .user-info img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        .section {
+            background-color: #344560;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .chart-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .chart {
+            width: 48%;
+        }
+        /* Add more styles based on your design */
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h1>ByteBarrage</h1>
+        <a href="#">User Info</a>
+        <a href="#">Water Levels Data</a>
+        <a href="#">Flowrates</a>
+        <a href="#">Gates Info</a>
+        <a href="#">Weather Data</a>
+        <a href="#">Maintenance</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="user-info">
+            <img src="path_to_user_image.jpg" alt="User Profile Picture">
+            <h2>Hello, Full Name</h2>
+        </div>
+
+        <div class="section">
+            <h3>Auto Data Range</h3>
+            <input type="date" id="start-date">
+            <input type="date" id="end-date">
+        </div>
+
+        <div class="section">
+            <h3>Services</h3>
+            <select>
+                <option value="all">All</option>
+                <option value="water-levels">Water Levels</option>
+                <option value="flowrates">Flowrates</option>
+                <option value="weather-data">Weather Data</option>
+            </select>
+        </div>
+
+        <div class="section">
+            <h3>Saddle</h3>
+            <select>
+                <option value="1">Saddle 1</option>
+                <option value="2">Saddle 2</option>
+                <option value="3">Saddle 3</option>
+            </select>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart">
+                <h3>Analysis</h3>
+                <!-- Chart.js goes here for time series data -->
+            </div>
+            <div class="chart">
+                <h3>Analysis (Percentage)</h3>
+                <!-- Pie chart goes here -->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
